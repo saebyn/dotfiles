@@ -1,0 +1,14 @@
+alignment top_right
+gap_x 0
+gap_y 0
+background no
+double_buffer yes 
+out_to_console yes 
+own_window yes 
+own_window_type desktop
+update_interval 0.9 
+use_xft yes
+xftfont xft:terminus:bold:pixelsize=15
+ 
+TEXT 
+${time %Y-%m-%d} ${time %T}

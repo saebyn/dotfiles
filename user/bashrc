@@ -1,0 +1,67 @@
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+
+bind 'set match-hidden-files off'
+
+
+# Change the window title of X terminals 
+case $TERM in
+    xterm*|rxvt*|Eterm)
+        PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
+        ;;
+    screen)
+        PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\033\\"'
+        ;;
+esac
+
+alias ls="ls --color=auto"
+alias minecraft="$HOME/.minecraft/minecraft"
+alias tmux="TERM=screen-256color-bce tmux"
+alias grep="grep --color"
+alias less="less -R -L -N"
+
+export LANG="en_US.UTF-8"
+export LC_COLLATE="C"
+
+export HISTCONTROL="ignoreboth:erasedups"
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTTIMEFORMAT="%x %X"
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+RESET="\[\017\]"
+NORMAL="\[\033[0m\]"
+RED="\[\033[31;1m\]"
+BLUE="\[\033[01;34m\]"
+GREEN="\[\033[01;32m\]"
+YELLOW="\[\033[33;1m\]"
+WHITE="\[\033[37;1m\]"
+SMILEY="${WHITE}:)${NORMAL}"
+FROWNY="${RED}:(${NORMAL}"
+SELECT="if [ \$? = 0 ]; then echo \"${SMILEY}\"; else echo \"${FROWNY}\"; fi"
+case $TERM in
+    xterm*|rxvt*|Eterm)
+        export PS1="${RESET}${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${BLUE}\W/ ${YELLOW}⚡${NORMAL} "
+	;;
+    screen)
+        export PS1="${RESET}${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${BLUE}\W/ ${YELLOW}\$${NORMAL} "
+	;;
+esac
+
+export CLUTTER_PAINT=disable-clipped-redraws:disable-culling
+export CLUTTER_VBLANK=True
+
+export EDITOR=vi
+
+[[ -f /etc/profile.d/bash-completion.sh ]] && source /etc/profile.d/bash-completion.sh
+
+alias vi='docker run --rm -t -i -e DISPLAY="`echo $DISPLAY`" -v `echo $HOME`:`echo $HOME` -v `echo $HOME`/.cache:/home/dev/.cache -v `echo $HOME`/.m2:/home/dev/.m2 -w `pwd` --net host saebyn/docker-vim'
+
+export CHROME_BIN=chromium-browser
+
+export BROWSER="/usr/bin/chromium-browser %s"
+set -o vi
+
+
+export PATH="$PATH:$HOME/.local/bin/"

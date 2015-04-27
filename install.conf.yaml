@@ -1,3 +1,21 @@
-- clean: []
-- link: {}
-- shell: []
+- clean: ['~']
+- link:
+        ~/.dotfiles: ''
+        ~/.tmux.conf: user/tmux.conf
+        ~/.tmux-powerlinerc: user/tmux-powerlinerc
+        ~/.tmux-powerline: user/tmux-powerline/
+        ~/.lein/profiles.clj:
+                path: user/lein-profiles.clj
+                create: true
+        ~/.nixpkgs/config.nix:
+                create: true
+                path: user/nixpkgs-config.nix
+        ~/.conkyrc: user/conkyrc
+        ~/.toprc: user/toprc
+        ~/.bash_profile: user/bash_profile
+        ~/.bashrc: user/bashrc
+        ~/.xmonad/xmonad.hs:
+                create: true
+                path: user/xmonad.hs
+- shell:
+        - [xmonad --recompile]
