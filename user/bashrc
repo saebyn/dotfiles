@@ -55,6 +55,11 @@ export CLUTTER_VBLANK=True
 export EDITOR=vi
 
 [[ -f /etc/profile.d/bash-completion.sh ]] && source /etc/profile.d/bash-completion.sh
+if [[ -d $HOME/.bash-completion ]]; then
+    for f in $HOME/.bash-completion/*; do
+        source $f;
+    done
+fi
 
 alias vi='docker run --rm -t -i -e DISPLAY="`echo $DISPLAY`" -v `echo $HOME`:`echo $HOME` -v `echo $HOME`/.cache:/home/dev/.cache -v `echo $HOME`/.m2:/home/dev/.m2 -w `pwd` --net host saebyn/docker-vim'
 

@@ -4,6 +4,9 @@
         ~/.tmux.conf: user/tmux.conf
         ~/.tmux-powerlinerc: user/tmux-powerlinerc
         ~/.tmux-powerline: user/tmux-powerline/
+        ~/.bash-completion/git.bash:
+                path: user/git-completion.bash
+                create: true
         ~/.lein/profiles.clj:
                 path: user/lein-profiles.clj
                 create: true
