@@ -1,0 +1,126 @@
+source $HOME/.vim/bundles.vim
+
+set undofile
+set expandtab
+set mouse=a
+set foldmethod=indent
+set foldlevel=99
+
+set enc=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf8,prc
+
+" Seriously, guys. It's not like :W is bound to anything anyway.
+command! W :w
+command! Q :q
+
+let mapleader=","            " change the leader to be a comma vs slash
+
+syntax on                    " syntax highlighing
+filetype on                  " try to detect filetypes
+filetype plugin indent on    " enable loading indent file for filetype
+
+
+"""" Reading/Writing
+set noautowrite             " Never write a file unless I request it.
+set noautowriteall          " NEVER.
+set noautoread              " Don't automatically re-read changed files.
+set modeline                " Allow vim options to be embedded in files;
+set modelines=5             " they must be within the first or last 5 lines.
+set ffs=unix,dos,mac        " Try recognizing dos, unix, and mac line endings.
+
+"""" Messages, Info, Status
+set ls=2                    " allways show status line
+set vb t_vb=                " Disable all bells.  I hate ringing/flashing.
+set confirm                 " Y-N-C prompt if closing with unsaved changes.
+set showcmd                 " Show incomplete normal mode commands as I type.
+set report=0                " : commands always print changed line count.
+set shortmess+=a            " Use [+]/[RO]/[w] for modified/readonly/written.
+set ruler                   " Show some info, even without statuslines.
+set laststatus=2            " Always show statusline, even if only 1 window.
+set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
+set smarttab
+set nowrap
+
+set encoding=utf-8
+set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
+let g:Powerline_symbols = 'fancy'
+
+"let g:vimclojure#ParenRainbow = 1
+"let g:vimclojure#DynamicHighlighting = 1
+"let g:vimclojure#FuzzyIndent = 1
+"let g:vimclojure#FuzzyIndentPatterns .= ",fresh"
+
+nnoremap / /\v
+vnoremap / /\v
+
+au BufNewFile,BufRead *.coffee setl shiftwidth=4 tabstop=4 shiftround ff=unix foldmethod=indent
+au BufNewFile,BufRead *.js setl ft=javascript shiftwidth=4 tabstop=4 shiftround ff=unix foldmethod=indent
+au BufNewFile,BufRead *.cljs set filetype=clojure foldmethod=indent
+au BufNewFile,BufRead *.cljx set filetype=clojure foldmethod=indent
+au BufNewFile,BufRead *.html set ft=html
+au BufNewFile,BufRead *.template set ft=html
+au BufNewFile,BufRead *.md set ft=markdown
+
+au FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 shiftround ff=unix foldmethod=indent
+au FileType java set shiftwidth=4 tabstop=4 foldmethod=indent
+au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
+au FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
+au FileType html setl shiftwidth=2 tabstop=2 shiftround ff=unix omnifunc=htmlcomplete#CompleteTags
+
+
+let g:SuperTabDefaultCompletionType = "context"
+let g:paredit_mode = 1
+
+set completeopt=menuone,longest,preview
+
+autocmd BufWritePost *.py call Flake8()
+
+" RestructuredText heading shortcuts
+nnoremap <leader>1 yyPVr=jyypVr=
+nnoremap <leader>2 yypVr=
+nnoremap <leader>3 yypVr-
+nnoremap <leader>4 yypVr+
+
+nnoremap <leader>w <C-w>v<C-w>l
+
+vnoremap <leader>r "hy:%s/<C-r>h//gc<left><left><left>
+
+set incsearch
+set hlsearch
+
+" Relative line numbers on the left, quite nice.
+set number
+set relativenumber
+
+" make Esc happen without waiting for timeoutlen
+" fixes Powerline delay
+augroup FastEscape
+  autocmd!
+  au InsertEnter * set timeoutlen=0
+  au InsertLeave * set timeoutlen=1000
+augroup END
+
+colorscheme hybrid
+set background=dark
+hi Normal ctermbg=none
+hi LineNr ctermbg=lightgrey
+
+let g:Powerline_symbols = 'unicode'
+
+highlight ColorColumn ctermbg=Magenta
+call matchadd('ColorColumn', '\%81v', 100)
+
+augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
+
+command! Console :Start! lein repl :headless
+
+autocmd QuickFixCmdPost *grep* cwindow
+set diffopt=vertical
+
+
+vmap "+y :!xclip -f -sel clip
+map "+p :r!xclip -o -sel clip

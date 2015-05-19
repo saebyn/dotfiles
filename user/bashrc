@@ -61,8 +61,6 @@ if [[ -d $HOME/.bash-completion ]]; then
     done
 fi
 
-alias vi='docker run --rm -t -i -e DISPLAY="`echo $DISPLAY`" -v `echo $HOME`:`echo $HOME` -v `echo $HOME`/.cache:/home/dev/.cache -v `echo $HOME`/.m2:/home/dev/.m2 -w `pwd` --net host saebyn/docker-vim'
-
 export CHROME_BIN=chromium-browser
 
 export BROWSER="/usr/bin/chromium-browser %s"

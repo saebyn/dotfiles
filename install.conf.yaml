@@ -17,8 +17,22 @@
         ~/.toprc: user/toprc
         ~/.bash_profile: user/bash_profile
         ~/.bashrc: user/bashrc
+        ~/.config/pep8:
+                create: true
+                path: user/pep8.ini
+        ~/.config/flake8:
+                create: true
+                path: user/pep8.ini
+        ~/.vim/bundles.vim:
+                create: true
+                path: user/bundles.vim
+        ~/.vim/bundle/Vundle.vim:
+                create: true
+                path: user/Vundle.vim
+        ~/.vimrc: user/vimrc
         ~/.xmonad/xmonad.hs:
                 create: true
                 path: user/xmonad.hs
 - shell:
         - [xmonad --recompile]
+        - [vim -u ~/.vim/bundles.vim +PluginInstall +qall]
