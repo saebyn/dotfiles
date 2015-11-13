@@ -16,11 +16,12 @@ case $TERM in
 esac
 
 alias ls="ls --color=auto"
-alias minecraft="$HOME/.minecraft/minecraft"
 alias tmux="TERM=screen-256color-bce tmux"
 alias grep="egrep --color"
 alias less="less -R -L -N"
 alias vi="vim"
+alias gitupdate="git checkout master && git pull upstream master && git push origin master"
+alias ggrep="git rev-list --all | xargs git grep"
 
 export LANG="en_US.UTF-8"
 export LC_COLLATE="C"
@@ -69,3 +70,5 @@ set -o vi
 
 
 export PATH="$PATH:$HOME/.local/bin/"
+
+alias open-wax='chromium-browser `waxdev url`'

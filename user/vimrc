@@ -86,6 +86,8 @@ nnoremap <leader>w <C-w>v<C-w>l
 
 vnoremap <leader>r "hy:%s/<C-r>h//gc<left><left><left>
 
+let g:rust_fold = 2
+
 set incsearch
 set hlsearch
 

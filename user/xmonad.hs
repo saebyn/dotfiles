@@ -1,3 +1,4 @@
+{-# LANGUAGE FlexibleContexts #-}
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
@@ -9,12 +10,31 @@ import XMonad.Layout.Fullscreen
 import XMonad.Util.EZConfig
 import XMonad.Actions.SpawnOn
 
+import XMonad.Hooks.UrgencyHook
+import XMonad.Util.NamedWindows
+import XMonad.Util.Run
+
 import Graphics.X11.ExtraTypes.XF86
 
 
+data LibNotifyUrgencyHook = LibNotifyUrgencyHook deriving (Read, Show)
+
+instance UrgencyHook LibNotifyUrgencyHook where
+    urgencyHook LibNotifyUrgencyHook w = do
+        name     <- getName w
+        Just idx <- fmap (W.findTag w) $ gets windowset
+
+        safeSpawn "notify-send" [show name, "workspace " ++ idx]
+
+
 main = do
+    spawn $ "feh --bg-fill /home/john/Downloads/GykjvD7.png"
     spawn $ "conky"
-    xmonad =<< myDzen myConfig
+    spawn $ "notify-osd"
+    config <- myDzen myConfig
+    xmonad
+        $ withUrgencyHook LibNotifyUrgencyHook
+        $ config
 
 
 toggleStrutsKey XConfig{modMask = modm} = (modm, xK_b )
@@ -30,16 +50,21 @@ myDzen conf = statusBar ("dzen2 " ++ flags) dzenPP toggleStrutsKey conf
 
 myConfig = defaultConfig {
         terminal = myTerminal
+      , modMask = mod4Mask
       , layoutHook = myLayout
       , manageHook = manageSpawn <+> myManageHooks
-      , workspaces = ["browser", "editor", "mixer", "top", "network"] ++ map show [5..9]
+      , workspaces = ["comm", "editor", "browser", "mixer", "top"] ++ map show [5..9]
+      , focusFollowsMouse  = False
+      , clickJustFocuses   = False
       , startupHook = do
           setWMName "LG3D"
-          spawnOn "browser" "chromium-browser"
+          spawnOn "comm" "chromium-browser --new-window https://saltbox.slack.com/messages/general/"
+          spawnOn "comm" "chromium-browser --app-id=pkclgpgponpjmpfokoepglboejdobkpl"
+          spawnOn "comm" "chromium-browser --app-id=knipolnnllmklapflnccelgolnpehhpl"
+          spawnOn "browser" "chromium-browser --new-window"
           spawnOn "editor" "urxvt -e tmux"
           spawnOn "mixer" "urxvt -e alsamixer -c 0"
           spawnOn "top" "urxvt -e top"
-          spawnOn "network" "urxvt -e bmon"
       } `additionalKeysP` myKeys `additionalKeys` extraKeys
 
 

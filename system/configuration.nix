@@ -73,10 +73,8 @@
     docker
     bmon
     file
-    ksnapshot
     leiningen
-    python-2.7.9
-    steam-userenv
+    python
     xsel
   ];
 
@@ -107,6 +105,13 @@
     synaptics.additionalOptions = ''
       Option "PalmMinWidth" "8"
     '';
+    deviceSection = ''
+      Option     "RegistryDwords" "PowerMizerEnable=0x1; PerfLevelSrc=0x3322; PowerMizerDefaultAC=0x1" 
+    '';
+
+    useGlamor = true;
+
+    wacom.enable = true;
 
     windowManager.xmonad.enable = true;
     windowManager.xmonad.enableContribAndExtras = true;
@@ -114,6 +119,7 @@
   };
 
   virtualisation.docker.enable = true;
+  virtualisation.docker.storageDriver = "devicemapper";
 
   time.timeZone = "America/Los_Angeles";
 
