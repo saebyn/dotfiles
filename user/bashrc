@@ -17,7 +17,6 @@ esac
 
 alias ls="ls --color=auto"
 alias minecraft="$HOME/.minecraft/minecraft"
-alias tmux="TERM=screen-256color-bce tmux"
 alias grep="egrep --color"
 alias less="less -R -L -N"
 
