@@ -4,6 +4,8 @@
         ~/.tmux.conf: user/tmux.conf
         ~/.tmux-powerlinerc: user/tmux-powerlinerc
         ~/.tmux-powerline: user/tmux-powerline/
+        ~/.gitconfig: user/gitconfig
+        ~/.global_ignore: user/global_ignore
         ~/.bash-completion/git.bash:
                 path: user/git-completion.bash
                 create: true

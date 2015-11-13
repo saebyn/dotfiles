@@ -1,0 +1,18 @@
+[user]
+	name = John Weaver
+	email = saebynx@gmail.com
+[core]
+	excludesfile = /home/john/.global_ignore
+	autocrlf = input
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	who = !printf \"== Commits by Author:\\n`git shortlog -s -n`\\n\"
+	pus = push
+	last = log -1 HEAD
+[push]
+	default = current
+[branch]
+	autosetuprebase = always
+[color]
+  ui = auto
+	status = auto
