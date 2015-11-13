@@ -29,6 +29,8 @@ export HISTFILESIZE=
 export HISTSIZE=
 export HISTTIMEFORMAT="%x %X"
 
+export EDITOR=vim
+
 export GIT_PS1_SHOWDIRTYSTATE=1
 RESET="\[\017\]"
 NORMAL="\[\033[0m\]"
@@ -51,8 +53,6 @@ esac
 
 export CLUTTER_PAINT=disable-clipped-redraws:disable-culling
 export CLUTTER_VBLANK=True
-
-export EDITOR=vi
 
 [[ -f /etc/profile.d/bash-completion.sh ]] && source /etc/profile.d/bash-completion.sh
 if [[ -d $HOME/.bash-completion ]]; then
