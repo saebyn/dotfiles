@@ -36,3 +36,5 @@
 - shell:
         - [xmonad --recompile]
         - [vim -u ~/.vim/bundles.vim +PluginInstall +qall]
+        - [git config --global user.name "John Weaver"]
+        - [git config --global user.email "saebynx@gmail.com"]
