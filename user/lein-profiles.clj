@@ -1,6 +1,4 @@
 {:user {:plugins [[lein-kibit "0.0.8"]
-                  [lein-midje "3.0.0"]
-                  [lein-typed "0.3.5"]
                   [jonase/eastwood "0.1.5"]]
         ;:dependencies [[clj-stacktrace "0.2.7"]
         ;               [spyscope "0.1.5"]

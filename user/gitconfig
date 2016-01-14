@@ -10,7 +10,7 @@
 	pus = push
 	last = log -1 HEAD
 [push]
-	default = current
+	default = matching
 [branch]
 	autosetuprebase = always
 [color]

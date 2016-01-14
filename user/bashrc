@@ -71,3 +71,12 @@ set -o vi
 export PATH="$PATH:$HOME/.local/bin/"
 
 alias open-wax='chromium-browser `waxdev url`'
+
+
+
+case "$(uname -s)" in
+        CYGWIN*|MINGW32*|MSYS*)
+                export JAVA_BIN=/cygdrive/c/ProgramData/Oracle/Java/javapath/java
+                export LEIN_JAVA_CMD=/cygdrive/c/ProgramData/Oracle/Java/javapath/java
+                ;;
+esac

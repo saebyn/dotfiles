@@ -6,6 +6,9 @@
         ~/.tmux-powerline: user/tmux-powerline/
         ~/.gitconfig: user/gitconfig
         ~/.global_ignore: user/global_ignore
+        ~/.ssh/config:
+                path: user/ssh_config
+                create: true
         ~/.bash-completion/git.bash:
                 path: user/git-completion.bash
                 create: true
