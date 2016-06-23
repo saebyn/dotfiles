@@ -1,14 +1,17 @@
-alignment top_right
-gap_x 0
-gap_y 0
-background no
-double_buffer yes 
-out_to_console yes 
-own_window yes 
-own_window_type desktop
-update_interval 0.9 
-use_xft yes
-xftfont xft:terminus:bold:pixelsize=15
+conky.config = {
+alignment = 'top_right',
+gap_x = 0,
+gap_y = 0,
+background = false,
+double_buffer = true,
+out_to_console = true,
+own_window = true,
+own_window_type = 'desktop',
+update_interval = 0.9,
+use_xft = true,
+font = 'xft:terminus:bold:pixelsize=15',
+}
  
-TEXT 
+conky.text = [[
 ${time %Y-%m-%d} ${time %T}
+]]

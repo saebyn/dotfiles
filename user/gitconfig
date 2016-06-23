@@ -4,13 +4,17 @@
 [core]
 	excludesfile = /home/john/.global_ignore
 	autocrlf = input
+	pager = less -+F
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg = log --no-merges --first-parent --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lgm = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	who = !printf \"== Commits by Author:\\n`git shortlog -s -n`\\n\"
 	pus = push
 	last = log -1 HEAD
+	br = branch -a --column --no-merged=master
+	st = status -s
 [push]
-	default = current
+	default = matching
 [branch]
 	autosetuprebase = always
 [color]

@@ -29,6 +29,7 @@ instance UrgencyHook LibNotifyUrgencyHook where
 
 main = do
     spawn $ "feh --bg-fill /home/john/Downloads/GykjvD7.png"
+    spawn $ "urxvtd"
     spawn $ "conky"
     spawn $ "notify-osd"
     config <- myDzen myConfig
@@ -53,18 +54,13 @@ myConfig = defaultConfig {
       , modMask = mod4Mask
       , layoutHook = myLayout
       , manageHook = manageSpawn <+> myManageHooks
-      , workspaces = ["comm", "editor", "browser", "mixer", "top"] ++ map show [5..9]
+      , workspaces = map show [1..9]
       , focusFollowsMouse  = False
       , clickJustFocuses   = False
       , startupHook = do
           setWMName "LG3D"
-          spawnOn "comm" "chromium-browser --new-window https://saltbox.slack.com/messages/general/"
-          spawnOn "comm" "chromium-browser --app-id=pkclgpgponpjmpfokoepglboejdobkpl"
-          spawnOn "comm" "chromium-browser --app-id=knipolnnllmklapflnccelgolnpehhpl"
-          spawnOn "browser" "chromium-browser --new-window"
-          spawnOn "editor" "urxvt -e tmux"
-          spawnOn "mixer" "urxvt -e alsamixer -c 0"
-          spawnOn "top" "urxvt -e top"
+          spawnOn "4" "urxvt -e alsamixer -c 0"
+          spawnOn "5" "urxvt -e top"
       } `additionalKeysP` myKeys `additionalKeys` extraKeys
 
 

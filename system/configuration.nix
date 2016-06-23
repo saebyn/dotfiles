@@ -28,6 +28,7 @@
     }
     '';
 
+  hardware.bluetooth.enable = true;
 
   networking = {
     hostName = "fornax";
@@ -74,7 +75,7 @@
     bmon
     file
     leiningen
-    python
+    python27Full
     xsel
   ];
 
@@ -83,6 +84,9 @@
     chromium = {
      enablePepperFlash = true;
      enablePepperPDF = true;
+    };
+    packageOverrides = pkgs: {
+      bluez = pkgs.bluez5;
     };
   };
 
@@ -119,11 +123,14 @@
   };
 
   virtualisation.docker.enable = true;
-  virtualisation.docker.storageDriver = "devicemapper";
+  virtualisation.docker.socketActivation = false;
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "john" ];
 
   time.timeZone = "America/Los_Angeles";
 
   hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.package = pkgs.pulseaudioFull;
   hardware.opengl.driSupport32Bit = true;
 
   security.setuidPrograms = ["slock"];
