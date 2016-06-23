@@ -35,9 +35,8 @@ export EDITOR=vim
 
 
 export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWUPSTREAM="auto"
-export GIT_PS1_SHOWSTASHSTATE="true"
-export GIT_PS1_SHOWUNTRACKEDFILES="true"
+export GIT_PS1_SHOWUPSTREAM="verbose"
+export GIT_PS1_SHOWCOLORHINTS=1
 RESET="\[\017\]"
 NORMAL="\[\033[0m\]"
 RED="\[\033[31;1m\]"
@@ -50,10 +49,10 @@ FROWNY="${RED}:(${NORMAL}"
 SELECT="if [ \$? = 0 ]; then echo \"${SMILEY}\"; else echo \"${FROWNY}\"; fi"
 case $TERM in
     xterm*|rxvt*|Eterm)
-        export PS1="$(__git_ps1 " (%s)")\n${RESET}${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${BLUE}\W/ ${YELLOW}⚡${NORMAL} "
+        export PS1="${RESET}${RED}⎧${YELLOW}\$(__git_ps1 'on %s') ${BLUE}[\W/]\n${RED}⎩${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${YELLOW}⚡${NORMAL} "
 	;;
     screen)
-        export PS1="$(__git_ps1 " (%s)")\n${RESET}${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${BLUE}\W/ ${YELLOW}\$${NORMAL} "
+        export PS1="${RESET}${RED}⎧${YELLOW}\$(__git_ps1 'on %s') ${BLUE}[\W/]\n${RED}⎩${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${YELLOW}\$${NORMAL} "
 	;;
 esac
 
