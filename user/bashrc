@@ -44,15 +44,15 @@ BLUE="\[\033[01;34m\]"
 GREEN="\[\033[01;32m\]"
 YELLOW="\[\033[33;1m\]"
 WHITE="\[\033[37;1m\]"
-SMILEY="${WHITE}:)${NORMAL}"
-FROWNY="${RED}:(${NORMAL}"
+SMILEY="${WHITE}☺${NORMAL}"
+FROWNY="${RED}☹${NORMAL}"
 SELECT="if [ \$? = 0 ]; then echo \"${SMILEY}\"; else echo \"${FROWNY}\"; fi"
 case $TERM in
     xterm*|rxvt*|Eterm)
-        export PS1="${RESET}${RED}⎧${YELLOW}\$(__git_ps1 'on %s') ${BLUE}[\W/]\n${RED}⎩${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${YELLOW}⚡${NORMAL} "
+        export PS1="${RESET}${YELLOW} ▲ ${RED}⎧${YELLOW}\$(__git_ps1 'on %s') ${BLUE}[\W/]\n${YELLOW}▲ ▲${RED}⎩${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${YELLOW}⚡${NORMAL} "
 	;;
     screen)
-        export PS1="${RESET}${RED}⎧${YELLOW}\$(__git_ps1 'on %s') ${BLUE}[\W/]\n${RED}⎩${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${YELLOW}\$${NORMAL} "
+        export PS1="${RESET}${YELLOW} ▲ ${RED}⎧${YELLOW}\$(__git_ps1 'on %s') ${BLUE}[\W/]\n${YELLOW}▲ ▲${RED}⎩${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${YELLOW}\$${NORMAL} "
 	;;
 esac
 
