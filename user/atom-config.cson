@@ -1,0 +1,148 @@
+"*":
+  "atom-clock":
+    showClockIcon: true
+  "atom-material-ui":
+    fonts: {}
+  "atom-pair":
+    pusher_app_key: "a4c8d9144584d78145a1"
+    pusher_app_secret: "44ccce423e4f33f33c97"
+    slack_url: "https://hooks.slack.com/services/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"
+  "autocomplete-plus":
+    confirmCompletion: "tab"
+  "autocomplete-python": {}
+  autosave:
+    enabled: true
+  "cargo-test-runner": {}
+  "character-table": {}
+  clock:
+    icon: true
+  core:
+    autoHideMenuBar: true
+    customFileTypes:
+      "text.html.angular": [
+        "*.template"
+        "*.pt"
+      ]
+    disabledPackages: [
+      "language-python"
+      "atom-pair"
+      "autocomplete-emojis"
+      "character-table"
+      "symbols-view"
+      "atomic-chrome"
+      "cargo-test-runner"
+      "dash"
+      "minimap"
+    ]
+    ignoredNames: [
+      ".git"
+      "*.pyc"
+      ".*.un~"
+    ]
+    themes: [
+      "one-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    autoIndentOnPaste: false
+    fontFamily: "\"Fira Code\""
+    fontSize: 20
+    invisibles: {}
+    preferredLineLength: 79
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    tabLength: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "e4b90f5f-d3bf-3a4c-0ee9-2e28c94ac67e"
+  "git-plus": {}
+  "github-plus": {}
+  linter:
+    errorPanelHeight: 147
+  "linter-eslint": {}
+  "linter-pylama":
+    executablePath: "/home/john/.local/bin/pylama"
+    usePep257: false
+  "linter-sass-lint": {}
+  minimap:
+    absoluteMode: true
+  "open-terminal-here":
+    command: "urxvt -e tmux"
+  racer: {}
+  react: {}
+  "remote-sync": {}
+  "slack-chat":
+    api_key: "2195547854.14563926662"
+    api_secret: "709ed4e7f698be5812b8c28c3d1f7fe2"
+    preloadChat: true
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  "todo-show":
+    ignoreThesePaths: [
+      "dashboard/**"
+      "**/node_modules/"
+      "**/bower_components/"
+      "devdocs/**"
+      "wax-node_modules/**"
+      "wax-static-dist/**"
+      "waxapi/**"
+      "**/scripts.min.js"
+    ]
+    sortBy: "Type"
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+    squashDirectoryNames: true
+  "vim-mode": {}
+  welcome:
+    showOnStartup: false
+".angular.html.text":
+  editor:
+    preferredLineLength: 79
+    tabLength: 4
+".basic.html.text":
+  editor:
+    autoIndentOnPaste: true
+    preferredLineLength: 79
+    softWrap: true
+    tabLength: 4
+".clojure.source":
+  editor:
+    preferredLineLength: 79
+".coffee.jsx.source":
+  editor:
+    preferredLineLength: 79
+".css.scss.source":
+  editor:
+    preferredLineLength: 79
+    tabLength: 2
+".diff.source":
+  editor:
+    preferredLineLength: 79
+".feature.source":
+  editor:
+    preferredLineLength: 79
+".js.jsx.source":
+  editor:
+    preferredLineLength: 79
+".nginx.source":
+  editor:
+    preferredLineLength: 79
+".python.regexp.source":
+  editor:
+    preferredLineLength: 79
+".python.source":
+  editor:
+    preferredLineLength: 79
+".rust.source":
+  editor:
+    preferredLineLength: 99
+".sass.source":
+  editor:
+    preferredLineLength: 79
+    tabLength: 2

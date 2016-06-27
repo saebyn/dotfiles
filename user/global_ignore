@@ -1,3 +1,5 @@
 *.un~
 .lein-repl-history
 *.swp
+wax/horn/static/src/scripts/scratch/
+.eggs/

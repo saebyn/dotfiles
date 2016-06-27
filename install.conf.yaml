@@ -19,6 +19,12 @@
         ~/.nixpkgs/config.nix:
                 create: true
                 path: user/nixpkgs-config.nix
+        ~/.atom/config.cson:
+                create: true
+                path: user/atom-config.cson
+        ~/.atom/styles.less:
+                create: true
+                path: user/atom-styles.less
         ~/.conkyrc: user/conkyrc
         ~/.toprc: user/toprc
         ~/.bash_profile: user/bash_profile
