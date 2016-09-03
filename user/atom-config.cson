@@ -29,7 +29,6 @@
       "autocomplete-emojis"
       "character-table"
       "symbols-view"
-      "atomic-chrome"
       "cargo-test-runner"
       "dash"
       "minimap"
@@ -59,10 +58,11 @@
   "git-plus": {}
   "github-plus": {}
   linter:
-    errorPanelHeight: 147
+    errorPanelHeight: 44
   "linter-eslint": {}
   "linter-pylama":
     executablePath: "/home/john/.local/bin/pylama"
+    ignoreErrorsAndWarnings: "W0612"
     usePep257: false
   "linter-sass-lint": {}
   minimap:

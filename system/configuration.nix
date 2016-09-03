@@ -57,7 +57,7 @@
     xfontsel
     xlsfonts
     xclip
-    chromium
+    google-chrome
     vim
     rxvt_unicode
     dzen2
@@ -81,10 +81,6 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    chromium = {
-     enablePepperFlash = true;
-     enablePepperPDF = true;
-    };
     packageOverrides = pkgs: {
       bluez = pkgs.bluez5;
     };

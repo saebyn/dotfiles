@@ -22,6 +22,7 @@ alias less="less -R -L -N"
 alias vi="vim"
 alias gitupdate="git checkout master && git pull upstream master --rebase && git push origin master"
 alias ggrep="git rev-list --all | xargs git grep"
+alias wax="cd ~/waxdev/sessions/main/wax/"
 
 export LANG="en_US.UTF-8"
 export LC_COLLATE="C"
@@ -49,10 +50,10 @@ FROWNY="${RED}☹${NORMAL}"
 SELECT="if [ \$? = 0 ]; then echo \"${SMILEY}\"; else echo \"${FROWNY}\"; fi"
 case $TERM in
     xterm*|rxvt*|Eterm)
-        export PS1="${RESET}${YELLOW} ▲ ${RED}⎧${YELLOW}\$(__git_ps1 'on %s') ${BLUE}[\W/]\n${YELLOW}▲ ▲${RED}⎩${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${YELLOW}⚡${NORMAL} "
+        export PS1="\n${RESET}${YELLOW} ▲ ${RED}⎧${YELLOW}\$(__git_ps1 'on %s') ${BLUE}[\W/]\n${YELLOW}▲ ▲${RED}⎩${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${YELLOW}⚡${NORMAL} "
 	;;
     screen)
-        export PS1="${RESET}${YELLOW} ▲ ${RED}⎧${YELLOW}\$(__git_ps1 'on %s') ${BLUE}[\W/]\n${YELLOW}▲ ▲${RED}⎩${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${YELLOW}\$${NORMAL} "
+        export PS1="\n${RESET}${YELLOW} ▲ ${RED}⎧${YELLOW}\$(__git_ps1 'on %s') ${BLUE}[\W/]\n${YELLOW}▲ ▲${RED}⎩${GREEN}\u@\h${NORMAL} \`${SELECT}\` ${YELLOW}\$${NORMAL} "
 	;;
 esac
 
