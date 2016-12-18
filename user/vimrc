@@ -40,7 +40,9 @@ set ruler                   " Show some info, even without statuslines.
 set laststatus=2            " Always show statusline, even if only 1 window.
 set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 set smarttab
-set nowrap
+set wrap
+set nolist
+set linebreak
 
 set encoding=utf-8
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
@@ -126,3 +128,7 @@ set diffopt=vertical
 
 vmap "+y :!xclip -f -sel clip
 map "+p :r!xclip -o -sel clip
+
+" vimwiki config
+let g:vimwiki_list = [{'path': '~/wiki/',
+                     \ 'syntax': 'markdown', 'ext': '.md'}]

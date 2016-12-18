@@ -3,16 +3,11 @@
     showClockIcon: true
   "atom-material-ui":
     fonts: {}
-  "atom-pair":
-    pusher_app_key: "a4c8d9144584d78145a1"
-    pusher_app_secret: "44ccce423e4f33f33c97"
-    slack_url: "https://hooks.slack.com/services/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"
   "autocomplete-plus":
     confirmCompletion: "tab"
   "autocomplete-python": {}
   autosave:
     enabled: true
-  "cargo-test-runner": {}
   "character-table": {}
   clock:
     icon: true
