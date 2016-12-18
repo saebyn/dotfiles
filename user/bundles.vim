@@ -12,6 +12,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'ervandew/supertab'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'vimwiki/vimwiki'
 
 " Other things
 Bundle 'othree/html5.vim'

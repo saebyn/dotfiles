@@ -23,6 +23,7 @@ alias vi="vim"
 alias gitupdate="git checkout master && git pull upstream master --rebase && git push origin master"
 alias ggrep="git rev-list --all | xargs git grep"
 alias wax="cd ~/waxdev/sessions/main/wax/"
+alias dh='docker run -ti -v "`pwd`:/data"'
 
 export LANG="en_US.UTF-8"
 export LC_COLLATE="C"

@@ -25,6 +25,9 @@
         ~/.atom/styles.less:
                 create: true
                 path: user/atom-styles.less
+        ~/.atom/atom-packages:
+                create: true
+                path: user/atom-packages
         ~/.conkyrc: user/conkyrc
         ~/.toprc: user/toprc
         ~/.bash_profile: user/bash_profile
@@ -49,3 +52,4 @@
         - [xmonad --recompile]
         - [pip install --user flake8]
         - [vim -u ~/.vim/bundles.vim +PluginInstall +qall]
+        - [apm install --packages-file ~/.atom/atom-packages]

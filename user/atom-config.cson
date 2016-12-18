@@ -27,11 +27,7 @@
       "language-python"
       "atom-pair"
       "autocomplete-emojis"
-      "character-table"
       "symbols-view"
-      "cargo-test-runner"
-      "dash"
-      "minimap"
     ]
     ignoredNames: [
       ".git"
@@ -51,14 +47,14 @@
     showIndentGuide: true
     showInvisibles: true
     softWrap: true
-    tabLength: 4
     tabType: "soft"
   "exception-reporting":
     userId: "e4b90f5f-d3bf-3a4c-0ee9-2e28c94ac67e"
-  "git-plus": {}
+  "git-plus":
+    experimental: true
   "github-plus": {}
   linter:
-    errorPanelHeight: 44
+    errorPanelHeight: 70
   "linter-eslint": {}
   "linter-pylama":
     executablePath: "/home/john/.local/bin/pylama"
@@ -69,6 +65,8 @@
     absoluteMode: true
   "open-terminal-here":
     command: "urxvt -e tmux"
+  "proto-repl":
+    autoPrettyPrint: true
   racer: {}
   react: {}
   "remote-sync": {}
@@ -124,6 +122,7 @@
 ".diff.source":
   editor:
     preferredLineLength: 79
+    tabLength: 4
 ".feature.source":
   editor:
     preferredLineLength: 79
