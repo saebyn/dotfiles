@@ -27,7 +27,7 @@ Bundle 'rust-lang/rust.vim'
 Bundle 'vim-scripts/TLA'
 Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
-
+Bundle 'leafgarland/typescript-vim'
 
 " Clojure stuff
 Bundle 'vim-scripts/paredit.vim'
