@@ -23,6 +23,7 @@
       "atom-pair"
       "autocomplete-emojis"
       "symbols-view"
+      "autocomplete-python"
     ]
     ignoredNames: [
       ".git"

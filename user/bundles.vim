@@ -25,6 +25,9 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'rust-lang/rust.vim'
 Bundle 'vim-scripts/TLA'
+Bundle 'godlygeek/tabular'
+Bundle 'plasticboy/vim-markdown'
+
 
 " Clojure stuff
 Bundle 'vim-scripts/paredit.vim'

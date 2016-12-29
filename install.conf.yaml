@@ -53,3 +53,4 @@
         - [pip install --user flake8]
         - [vim -u ~/.vim/bundles.vim +PluginInstall +qall]
         - [apm install --packages-file ~/.atom/atom-packages]
+        - [vagrant plugin install vagrant-nixos-plugin]
