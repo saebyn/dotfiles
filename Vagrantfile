@@ -20,17 +20,17 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder ".", "/home/john/dotfiles"
 
   $script = <<-SCRIPT
-  chown john /home/john
+  mkdir /home/john/.ssh
+  chown john /home/john /home/john/.ssh
   cp /home/vagrant/.ssh/authorized_keys /home/john/.ssh/
   chown john /home/john/.ssh/authorized_keys
-  SCRIPT
+SCRIPT
 
   config.vm.provision "shell", inline: $script, privileged: true
 
   $script = <<-SCRIPT
-  cd /home/john/dotfiles
-  ./install || true
-  SCRIPT
+  sudo -u john sh -c 'cd /home/john/dotfiles; ./install || true'
+SCRIPT
 
   config.vm.provision "shell", inline: $script, privileged: false
 
@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |v|
       #v.gui = true
-      #v.customize ["modifyvm", :id, "--vram", "64"]
+      v.customize ["modifyvm", :id, "--vram", "64", "--monitorcount", "2"]
       v.memory = 1024
       v.cpus = 2
   end
