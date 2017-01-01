@@ -34,12 +34,12 @@
 	macchanger
 	minecraft
 	nodejs-6_x
-        npm2nix
+  npm2nix
 	notify-osd
 	obs-studio
 	octave
 	openssl
-        #oraclejdk
+  #oraclejdk
 	patchelf
 	psmisc
 	deluge
@@ -52,9 +52,10 @@
 	snes9x-gtk
 	steam
 	unzip
+  vim_configurable
 	which
 	winetricks
-        wineFull
+  wineFull
 	wireshark-qt
 	xorg.xauth
 	xboxdrv

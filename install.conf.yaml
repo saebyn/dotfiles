@@ -1,6 +1,7 @@
 - clean: ['~']
 - link:
         ~/.dotfiles: ''
+        ~/.Xresources: user/Xresources
         ~/.tmux.conf: user/tmux.conf
         ~/.tmux-powerlinerc: user/tmux-powerlinerc
         ~/.tmux-powerline: user/tmux-powerline/
