@@ -28,6 +28,7 @@ Bundle 'vim-scripts/TLA'
 Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'leafgarland/typescript-vim'
+Bundle 'LnL7/vim-nix'
 
 " Clojure stuff
 Bundle 'vim-scripts/paredit.vim'

@@ -29,10 +29,11 @@ SCRIPT
   config.vm.provision "shell", inline: $script, privileged: true
 
   $script = <<-SCRIPT
+  sudo -i -u john nix-env -i all
   sudo -u john sh -c 'cd /home/john/dotfiles; ./install || true'
 SCRIPT
 
-  config.vm.provision "shell", inline: $script, privileged: false
+  config.vm.provision "shell", inline: $script, privileged: false, run: 'always'
 
   if VAGRANT_COMMAND == "ssh"
       config.ssh.username = 'john'
