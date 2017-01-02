@@ -105,7 +105,6 @@ augroup FastEscape
   au InsertLeave * set timeoutlen=1000
 augroup END
 
-colorscheme hybrid
 set background=dark
 hi Normal ctermbg=none
 hi LineNr ctermbg=lightgrey
@@ -132,3 +131,5 @@ map "+p :r!xclip -o -sel clip
 " vimwiki config
 let g:vimwiki_list = [{'path': '~/wiki/',
                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
+colorscheme solarized

@@ -42,5 +42,5 @@ Bundle 'typedclojure/vim-typedclojure'
 
 " Theme stuff
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'w0ng/vim-hybrid'
+" Bundle 'w0ng/vim-hybrid'
 call vundle#end()
