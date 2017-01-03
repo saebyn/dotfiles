@@ -58,10 +58,10 @@ instance UrgencyHook LibNotifyUrgencyHook where
         safeSpawn "notify-send" [show name, "workspace " ++ idx]
 
 myScratchpads =
-    [
-    NS "top" "urxvtc -e top" (title =? "top")           defaultFloating,
-    NS "vimwiki" "gvim -c 'set title titlestring=vimwiki|call vimwiki#base#goto_index(v:count1)'" (title =? "vimwiki") defaultFloating,
-    NS "alsamixer" "urxvtc -e alsamixer -c 0" (title =? "alsamixer") defaultFloating
+    [ NS "top" "urxvtc -e top" (title =? "top")                        defaultFloating
+    , NS "vimwiki" "gvim -c 'set title titlestring=vimwiki|call vimwiki#base#goto_index(v:count1)'" (title =? "vimwiki")               defaultFloating
+    , NS "alsamixer" "urxvtc -e alsamixer -c 0" (title =? "alsamixer") defaultFloating
+    , NS "wicd" "wicd-gtk -n" (title =? "Wicd Network Manager")                                                              defaultFloating
     ]
  
 
@@ -130,11 +130,12 @@ myPromptConfig = def {
 
 
 
-myKeys = [ ("M-p", shellPrompt myPromptConfig),
-           ("M-S-/", spawn "chromium https://wiki.haskell.org/wikiupload/d/d6/Xmbindings.svg"),
-           ("M-n", namedScratchpadAction myScratchpads "vimwiki"),
-           ("M-S-m", namedScratchpadAction myScratchpads "alsamixer"),
-           ("M-S-t", namedScratchpadAction myScratchpads "top")
+myKeys = [ ("M-p", shellPrompt myPromptConfig)
+         , ("M-S-/", spawn "xdg-open https://wiki.haskell.org/wikiupload/d/d6/Xmbindings.svg")
+         , ("M-C-n", namedScratchpadAction myScratchpads "vimwiki")
+         , ("M-C-m", namedScratchpadAction myScratchpads "alsamixer")
+         , ("M-C-t", namedScratchpadAction myScratchpads "top")
+         , ("M-C-w", namedScratchpadAction myScratchpads "wicd")
          ]
 
 extraKeys = [
