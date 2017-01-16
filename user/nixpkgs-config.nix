@@ -53,6 +53,7 @@
 	snes9x-gtk
 	steam
 	unzip
+  vagrant
   vim_configurable
 	which
 	winetricks

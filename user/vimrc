@@ -56,8 +56,7 @@ let g:Powerline_symbols = 'fancy'
 nnoremap / /\v
 vnoremap / /\v
 
-au BufNewFile,BufRead *.coffee setl shiftwidth=4 tabstop=4 shiftround ff=unix foldmethod=indent
-au BufNewFile,BufRead *.js setl ft=javascript shiftwidth=4 tabstop=4 shiftround ff=unix foldmethod=indent
+au BufNewFile,BufRead *.js setl ft=javascript shiftwidth=2 tabstop=2 shiftround ff=unix foldmethod=indent
 au BufNewFile,BufRead *.cljs set filetype=clojure foldmethod=indent
 au BufNewFile,BufRead *.cljx set filetype=clojure foldmethod=indent
 au BufNewFile,BufRead *.html set ft=html
