@@ -48,6 +48,8 @@ set encoding=utf-8
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
 let g:Powerline_symbols = 'fancy'
 
+set clipboard=unnamedplus
+
 "let g:vimclojure#ParenRainbow = 1
 "let g:vimclojure#DynamicHighlighting = 1
 "let g:vimclojure#FuzzyIndent = 1
