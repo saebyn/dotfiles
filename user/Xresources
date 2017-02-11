@@ -82,6 +82,6 @@ URxvt.pointerBlank:         true
 *color15: #fdf6e3
 
 
-urxvt.perl-ext-common: default,matcher
+urxvt.perl-ext-common: default,matcher,selection-to-clipboard
 urxvt.url-launcher: /usr/bin/xdg-open
 urxvt.matcher.button: 1
