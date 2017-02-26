@@ -48,6 +48,8 @@ set encoding=utf-8
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
 let g:Powerline_symbols = 'fancy'
 
+set clipboard=unnamedplus
+
 "let g:vimclojure#ParenRainbow = 1
 "let g:vimclojure#DynamicHighlighting = 1
 "let g:vimclojure#FuzzyIndent = 1
@@ -56,8 +58,7 @@ let g:Powerline_symbols = 'fancy'
 nnoremap / /\v
 vnoremap / /\v
 
-au BufNewFile,BufRead *.coffee setl shiftwidth=4 tabstop=4 shiftround ff=unix foldmethod=indent
-au BufNewFile,BufRead *.js setl ft=javascript shiftwidth=4 tabstop=4 shiftround ff=unix foldmethod=indent
+au BufNewFile,BufRead *.js setl ft=javascript shiftwidth=2 tabstop=2 shiftround ff=unix foldmethod=indent
 au BufNewFile,BufRead *.cljs set filetype=clojure foldmethod=indent
 au BufNewFile,BufRead *.cljx set filetype=clojure foldmethod=indent
 au BufNewFile,BufRead *.html set ft=html
@@ -105,7 +106,6 @@ augroup FastEscape
   au InsertLeave * set timeoutlen=1000
 augroup END
 
-colorscheme hybrid
 set background=dark
 hi Normal ctermbg=none
 hi LineNr ctermbg=lightgrey
@@ -132,3 +132,5 @@ map "+p :r!xclip -o -sel clip
 " vimwiki config
 let g:vimwiki_list = [{'path': '~/wiki/',
                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
+colorscheme solarized
