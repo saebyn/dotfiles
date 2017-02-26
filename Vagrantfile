@@ -20,6 +20,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder ".", "/home/john/dotfiles"
 
   $script = <<-SCRIPT
+  nixos-rebuild switch --upgrade
   mkdir /home/john/.ssh
   chown john /home/john /home/john/.ssh
   cp /home/vagrant/.ssh/authorized_keys /home/john/.ssh/
