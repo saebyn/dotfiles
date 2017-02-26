@@ -19,6 +19,7 @@
         firefox
         dzen2
         dmenu2
+        rxvt_unicode
         xclip
         conky
         pamixer
