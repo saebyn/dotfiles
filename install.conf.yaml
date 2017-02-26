@@ -46,6 +46,7 @@
                 create: true
                 path: user/Vundle.vim
         ~/.vimrc: user/vimrc
+        ~/.backgrounds: user/backgrounds
         ~/.xmonad/xmonad.hs:
                 create: true
                 path: user/xmonad.hs

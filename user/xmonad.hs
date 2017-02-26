@@ -67,7 +67,7 @@ myScratchpads =
 
 
 main = do
-    spawn $ "feh --bg-fill /home/john/Downloads/GykjvD7.png"
+    spawn $ "feh --bg-fill ~/.backgrounds/GykjvD7.png"
     spawn $ "urxvtd"
     spawn $ "conky"
     spawn $ "notify-osd"
