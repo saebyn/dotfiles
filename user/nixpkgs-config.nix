@@ -34,6 +34,7 @@
         light
         macchanger
         minecraft
+        ncdu
         nodejs-6_x
         npm2nix
         notify-osd
@@ -45,8 +46,6 @@
         psmisc
         deluge
         python27Packages.flake8
-        python27Packages.pip
-        python27Packages.pygame
         python27Packages.virtualenv
         python3
         rustc

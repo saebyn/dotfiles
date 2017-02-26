@@ -50,8 +50,13 @@
                 create: true
                 path: user/xmonad.hs
 - shell:
+        - 
+          command: nix-env -i all
+          description: Installing user packages for NixOS
+          stdout: true
+          stderr: true
         - [xmonad --recompile]
-        - [pip install --user flake8]
+        #- [pip install --user flake8]
         - [vim -u ~/.vim/bundles.vim +PluginInstall +qall]
-        - [apm install --packages-file ~/.atom/atom-packages]
+        #- [apm install --packages-file ~/.atom/atom-packages]
         - [vagrant plugin install vagrant-nixos-plugin]
