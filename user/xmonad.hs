@@ -85,7 +85,7 @@ myDzen conf = statusBar ("dzen2 " ++ flags) dzenPP toggleStrutsKey conf
     fg      = "'" ++ solarizedCyan ++ "'" -- n.b quoting
     bg      = "'" ++ solarizedBase02 ++ "'"
     font    = "'xft:Fira Code:pixelsize=18'"
-    flags   = "-e 'onstart=lower' -w 1920 -ta l -fg " ++ fg ++ " -bg " ++ bg ++ " -fn " ++ font
+    flags   = "-e 'onstart=lower' -ta l -fg " ++ fg ++ " -bg " ++ bg ++ " -fn " ++ font
 
 
 myConfig = defaultConfig {

@@ -17,6 +17,16 @@
         ffmpeg
         file
         firefox
+        dzen2
+        dmenu2
+        xclip
+        conky
+        pamixer
+        terminus_font
+        gitAndTools.gitFull
+        tmux
+        xfontsel
+        xlsfonts
         gcc6
         gdb
         gnumake
@@ -26,11 +36,13 @@
         idea.idea-community
         python27Packages.ipython
         jq
+        gimp
         kde4.kcachegrind
         kde4.ksnapshot
         leiningen
         libffi
         libnotify
+        libreoffice
         light
         macchanger
         minecraft

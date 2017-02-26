@@ -5,33 +5,13 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    terminus_font
-    gitAndTools.gitFull
-    tmux
-    xfontsel
-    xlsfonts
-    xclip
-    firefox
+    git
     vim
-    rxvt_unicode
-    dzen2
-    dmenu2
-    conky
-    pamixer
     jre
-    libreoffice
-    gimp
-    inkscape
-    vlc
-    tigervnc
     slock
     docker
-    vagrant
     bmon
-    file
-    leiningen
     python27Full
-    xsel
   ];
 
   nixpkgs.config = {
@@ -78,4 +58,6 @@
   hardware.opengl.driSupport32Bit = true;
 
   security.setuidPrograms = ["slock"];
+
+  users.mutableUsers = false;
 }
