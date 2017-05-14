@@ -1,13 +1,22 @@
 - clean: ['~']
 - link:
+        ~/.local/bin/maildir-notmuch-sync:
+                create: true
+                path: user/maildir-notmuch-sync
+        ~/.config/powerline/themes:
+                create: true
+                path: user/powerline-themes
         ~/.dotfiles: ''
+        ~/.mailcap: user/mailcap
+        ~/.notmuch-config: user/notmuch-config
         ~/.Xresources: user/Xresources
         ~/.tmux.conf: user/tmux.conf
-        ~/.tmux-powerlinerc: user/tmux-powerlinerc
-        ~/.tmux-powerline: user/tmux-powerline/
         ~/.gitconfig: user/gitconfig
         ~/.global_ignore: user/global_ignore
         ~/.git-prompt.sh: user/git-prompt.sh
+        ~/.config/systemd/user:
+                create: true
+                path: user/systemd/
         ~/.ssh/config:
                 path: user/ssh_config
                 create: true
@@ -50,6 +59,9 @@
         ~/.xmonad/xmonad.hs:
                 create: true
                 path: user/xmonad.hs
+        ~/.local/bin/powerline.sh:
+                create: true
+                path: user/powerline.sh
 - shell:
         - 
           command: nix-env -i all
@@ -61,3 +73,6 @@
         - [vim -u ~/.vim/bundles.vim +PluginInstall +qall]
         #- [apm install --packages-file ~/.atom/atom-packages]
         - [vagrant plugin install vagrant-nixos-plugin]
+        - [systemctl --user enable mbsync@john.service]
+        - [systemctl --user enable mbsync@john.timer]
+        - [systemctl --user start mbsync@john.timer]

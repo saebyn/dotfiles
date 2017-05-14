@@ -10,10 +10,11 @@ Bundle 'gmarik/Vundle.vim'
 " General utilities
 Bundle 'tpope/vim-fugitive'
 Bundle 'ervandew/supertab'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'airblade/vim-gitgutter'
 Bundle 'vimwiki/vimwiki'
 Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'simnalamburt/vim-mundo'
 
 " Other things
 Bundle 'othree/html5.vim'

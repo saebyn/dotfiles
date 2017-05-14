@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-export PATH="/bin:/sbin:/usr/bin:/usr/sbin:$PATH:$HOME/.local/bin/"
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin:$PATH:$HOME/.local/bin/:$HOME/commands"
 
 source ~/.git-prompt.sh
 
@@ -69,9 +69,8 @@ if [[ -d $HOME/.bash-completion ]]; then
     done
 fi
 
-export CHROME_BIN=chromium-browser
 
-export BROWSER="/usr/bin/chromium-browser %s"
+export BROWSER="google-chrome-stable %s"
 set -o vi
 
 case "$(uname -s)" in
@@ -80,3 +79,4 @@ case "$(uname -s)" in
                 export LEIN_JAVA_CMD=/cygdrive/c/ProgramData/Oracle/Java/javapath/java
                 ;;
 esac
+

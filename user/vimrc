@@ -1,6 +1,9 @@
 source $HOME/.vim/bundles.vim
 
+" Enable persistent undo so that undo history persists across vim sessions
 set undofile
+set undodir=~/.vim/undo
+
 set expandtab
 set mouse=a
 set foldmethod=indent
@@ -20,6 +23,10 @@ syntax on                    " syntax highlighing
 filetype on                  " try to detect filetypes
 filetype plugin indent on    " enable loading indent file for filetype
 
+"""" For powerline
+set laststatus=2 " Always display the statusline in all windows
+set showtabline=2 " Always display the tabline, even if there is only one tab
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 """" Reading/Writing
 set noautowrite             " Never write a file unless I request it.
@@ -37,11 +44,13 @@ set showcmd                 " Show incomplete normal mode commands as I type.
 set report=0                " : commands always print changed line count.
 set shortmess+=a            " Use [+]/[RO]/[w] for modified/readonly/written.
 set ruler                   " Show some info, even without statuslines.
-set laststatus=2            " Always show statusline, even if only 1 window.
 set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 set smarttab
 set wrap
-set nolist
+
+set list
+set listchars=tab:▸\ ,eol:¬
+
 set linebreak
 
 set encoding=utf-8
@@ -125,9 +134,7 @@ command! Console :Start! lein repl :headless
 autocmd QuickFixCmdPost *grep* cwindow
 set diffopt=vertical
 
-
-vmap "+y :!xclip -f -sel clip
-map "+p :r!xclip -o -sel clip
+nnoremap <F5> :MundoToggle<CR>
 
 " vimwiki config
 let g:vimwiki_list = [{'path': '~/wiki/',

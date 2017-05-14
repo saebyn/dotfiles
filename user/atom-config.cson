@@ -30,6 +30,7 @@
       "*.pyc"
       ".*.un~"
     ]
+    telemetryConsent: "no"
     themes: [
       "one-dark-ui"
       "solarized-dark-syntax"
@@ -46,8 +47,7 @@
     tabType: "soft"
   "exception-reporting":
     userId: "e4b90f5f-d3bf-3a4c-0ee9-2e28c94ac67e"
-  "git-plus":
-    experimental: true
+  "git-plus": {}
   "github-plus": {}
   linter:
     errorPanelHeight: 70

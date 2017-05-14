@@ -146,7 +146,7 @@ extraKeys = [
          ]
 
 
-myTerminal = "urxvtc"
+myTerminal = "urxvtc -e tmux"
 
 
 myLayout = tabs ||| avoidStruts (tile ||| mtile) ||| full

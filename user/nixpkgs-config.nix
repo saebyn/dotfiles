@@ -5,6 +5,17 @@
     all = with pkgs; buildEnv {
       name = "all";
       paths = [
+        socat
+        vscode
+        inotify-tools
+        w3m
+        notmuch
+        python35Packages.powerline
+        powerline-fonts
+        dos2unix
+        isync
+        wget
+        neomutt
         atom
         awscli
         bashCompletion
@@ -35,11 +46,9 @@
         graphviz
         i7z
         idea.idea-community
-        python27Packages.ipython
+        python35Packages.ipython
         jq
         gimp
-        kde4.kcachegrind
-        kde4.ksnapshot
         leiningen
         libffi
         libnotify

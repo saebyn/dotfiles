@@ -1,0 +1,8 @@
+[Unit]
+Description=Mailbox synchronization service for user %I
+
+[Service]
+Type=oneshot
+ExecStart=/home/john/.nix-profile/bin/mbsync -Va ; /home/john/.nix-profile/bin/notmuch new
+StandardOutput=syslog
+StandardError=syslog
