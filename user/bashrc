@@ -70,7 +70,7 @@ if [[ -d $HOME/.bash-completion ]]; then
 fi
 
 
-export BROWSER="google-chrome-stable %s"
+export BROWSER="firefox %s"
 set -o vi
 
 case "$(uname -s)" in
