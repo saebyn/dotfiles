@@ -63,7 +63,6 @@
         obs-studio
         octave
         openssl
-        #oraclejdk
         patchelf
         psmisc
         deluge
@@ -71,7 +70,6 @@
         python27Packages.virtualenv
         python3
         rustc
-        snes9x-gtk
         steam
         unzip
         vagrant
