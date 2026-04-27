@@ -1,7 +1,17 @@
-# saebyn dotfiles
+# dotfiles
 
-Current NixOS/Niri/Neovim configuration.
+Portable user configuration managed with chezmoi.
 
-This branch is a fresh rebuild of my dotfiles setup. Older historical config is preserved on:
+This repo intentionally focuses on user-level dotfiles, not full system configuration.
 
-- legacy/pre-2026-refresh
+## Layout
+
+- `home/` contains chezmoi-managed source state.
+- `.chezmoiroot` points chezmoi at `home/`.
+
+## Apply
+
+```bash
+chezmoi diff
+chezmoi apply
+```
