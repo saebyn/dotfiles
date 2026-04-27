@@ -1,0 +1,20 @@
+workspace "personal" {
+  // Workspace 1: browsing, email, etc
+  open-on-output "HDMI-A-1"
+}
+
+workspace "obs" {
+  open-on-output "HDMI-A-1"
+}
+
+workspace "shared/focus" {
+  open-on-output "DP-1"
+}
+
+workspace "stream-monitor" {
+  open-on-output "DP-2"
+}
+
+workspace "gtnh" {
+  open-on-output "DP-3"
+}
