@@ -1,0 +1,102 @@
+[gd_resource type="EditorSettings" format=3]
+
+[sub_resource type="InputEventKey" id="InputEventKey_5cr5a"]
+keycode = 4194326
+
+[resource]
+interface/theme/base_color = Color(0.161, 0.161, 0.161, 1)
+interface/theme/accent_color = Color(0.337, 0.62, 1, 1)
+interface/theme/contrast = 0.3
+filesystem/external_programs/raster_image_editor = "/etc/profiles/per-user/saebyn/bin/aseprite"
+filesystem/external_programs/vector_image_editor = "/etc/profiles/per-user/saebyn/bin/inkscape"
+filesystem/external_programs/audio_editor = "/etc/profiles/per-user/saebyn/bin/audacity"
+filesystem/external_programs/3d_model_editor = "/etc/profiles/per-user/saebyn/bin/blender"
+filesystem/external_programs/terminal_emulator = "/run/current-system/sw/bin/konsole"
+filesystem/import/blender/blender_path = "/etc/profiles/per-user/saebyn/bin/blender"
+text_editor/theme/highlighting/symbol_color = Color(0.67, 0.79, 1, 1)
+text_editor/theme/highlighting/keyword_color = Color(1, 0.44, 0.52, 1)
+text_editor/theme/highlighting/control_flow_keyword_color = Color(1, 0.55, 0.8, 1)
+text_editor/theme/highlighting/base_type_color = Color(0.26, 1, 0.76, 1)
+text_editor/theme/highlighting/engine_type_color = Color(0.56, 1, 0.86, 1)
+text_editor/theme/highlighting/user_type_color = Color(0.78, 1, 0.93, 1)
+text_editor/theme/highlighting/comment_color = Color(1, 1, 1, 0.5)
+text_editor/theme/highlighting/doc_comment_color = Color(0.6, 0.7, 0.8, 0.8)
+text_editor/theme/highlighting/string_color = Color(1, 0.93, 0.63, 1)
+text_editor/theme/highlighting/background_color = Color(0.103039995, 0.103039995, 0.103039995, 1)
+text_editor/theme/highlighting/completion_background_color = Color(0.14651, 0.14651, 0.14651, 1)
+text_editor/theme/highlighting/completion_selected_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/completion_existing_color = Color(1, 1, 1, 0.14)
+text_editor/theme/highlighting/completion_font_color = Color(1, 1, 1, 0.75)
+text_editor/theme/highlighting/text_color = Color(1, 1, 1, 0.75)
+text_editor/theme/highlighting/line_number_color = Color(1, 1, 1, 0.5)
+text_editor/theme/highlighting/safe_line_number_color = Color(1, 1.2, 1, 0.75)
+text_editor/theme/highlighting/caret_color = Color(1, 1, 1, 1)
+text_editor/theme/highlighting/selection_color = Color(0.337, 0.62, 1, 0.4)
+text_editor/theme/highlighting/brace_mismatch_color = Color(1, 0.47, 0.42, 1)
+text_editor/theme/highlighting/current_line_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/line_length_guideline_color = Color(0.161, 0.161, 0.161, 1)
+text_editor/theme/highlighting/word_highlighted_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/number_color = Color(0.63, 1, 0.88, 1)
+text_editor/theme/highlighting/function_color = Color(0.34, 0.7, 1, 1)
+text_editor/theme/highlighting/member_variable_color = Color(0.736, 0.88, 1, 1)
+text_editor/theme/highlighting/mark_color = Color(1, 0.47, 0.42, 0.3)
+text_editor/theme/highlighting/warning_color = Color(0.83, 0.78, 0.62, 0.15)
+text_editor/theme/highlighting/breakpoint_color = Color(1, 0.47, 0.42, 1)
+text_editor/theme/highlighting/code_folding_color = Color(1, 1, 1, 0.27)
+text_editor/theme/highlighting/search_result_color = Color(1, 1, 1, 0.07)
+text_editor/behavior/navigation/open_script_when_connecting_signal_to_existing_method = false
+text_editor/behavior/indent/type = 1
+text_editor/behavior/indent/size = 2
+text_editor/behavior/indent/auto_indent = false
+text_editor/behavior/indent/indent_wrapped_lines = false
+text_editor/behavior/files/trim_final_newlines_on_save = false
+text_editor/behavior/files/restore_scripts_on_load = false
+text_editor/external/exec_path = "/etc/profiles/per-user/saebyn/bin/code"
+text_editor/external/exec_flags = "{project} --goto {file}:{line}:{col}"
+text_editor/external/use_external_editor = true
+editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
+editors/animation/default_animation_step = 0.033333335
+run/platforms/linuxbsd/prefer_wayland = true
+network/connection/network_mode = 1
+network/tls/editor_tls_certificates = "/home/saebyn/Downloads/ca-certificates.crt"
+project_manager/directory_naming_convention = 4
+export/android/debug_keystore = "/home/saebyn/.local/share/godot/keystores/debug.keystore"
+export/android/debug_keystore_pass = "android"
+export/android/java_sdk_path = ""
+export/android/android_sdk_path = "/home/saebyn/Android/Sdk"
+export/macos/rcodesign = ""
+export/web/http_port = 8060
+export/web/tls_key = ""
+export/web/tls_certificate = ""
+export/windows/rcedit = ""
+export/windows/osslsigncode = ""
+export/windows/wine = ""
+_editor_settings_advanced_mode = true
+_project_settings_advanced_mode = true
+_export_template_download_directory = "/home/saebyn/.cache/godot"
+_default_feature_profile = ""
+_script_setup_templates_dictionary = {}
+_use_favorites_root_selection = false
+_script_setup_use_script_templates = false
+gut/output_font_name = "CourierPrime"
+gut/output_font_size = 30
+gut/hide_result_tree = false
+gut/hide_output_text = false
+gut/hide_settings = true
+gut/use_colors = true
+debug_draw_3d/settings/telemetry_state = 1
+gut/run_externally = false
+gut/run_externally_options_dialog_size = Vector2i(1300, 1336)
+gut/shortcuts_dialog_size = Vector2i(1280, 1152)
+gut/editor_window_size = Vector2i(1256, 1378)
+gut/editor_window_on_top = false
+_export_preset_advanced_mode = false
+export/android/scrcpy/screen_size = "1920x1080/120"
+export/macos/actool = ""
+shortcuts = [{
+"name": "spatial_editor/viewport_zoom_modifier_1",
+"shortcuts": [SubResource("InputEventKey_5cr5a")]
+}, {
+"name": "spatial_editor/viewport_zoom_modifier_2",
+"shortcuts": []
+}]

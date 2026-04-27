@@ -1,0 +1,4 @@
+default-timeout=5000
+
+[mode=dnd]
+invisible=1
