@@ -1,0 +1,3 @@
+export ANDROID_HOME="/home/saebyn/Android/Sdk"
+export EDITOR="nvim"
+eval "$(starship init bash)"
