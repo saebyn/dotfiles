@@ -28,6 +28,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r"^Ardour$"#
+    prefer-no-csd false
+}
+
+window-rule {
     match app-id=r#"firefox$"# title="^Main - "
     open-on-workspace "personal"
 }
