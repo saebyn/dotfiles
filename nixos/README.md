@@ -1,10 +1,10 @@
-This directory stages the NixOS configuration for migration into the dotfiles repo.
+This directory contains the NixOS configuration tracked in this repository.
 
 Current status:
-- `hosts/saebyn-studio/` contains copies of the active host config.
-- Root-level `configuration.nix` and `hardware-configuration.nix` remain untouched.
+- `hosts/saebyn-studio/` contains the active host configuration.
+- `modules/` contains reusable NixOS modules for shared concerns.
+- `hardware-configuration.nix` remains host-specific and machine-bound.
 
-Planned next steps:
-- Move this `nixos/` directory into the dotfiles repository.
-- Point `/etc/nixos/configuration.nix` at `hosts/saebyn-studio/configuration.nix`.
-- Split the monolithic configuration into reusable modules.
+Notes:
+- This tree is separate from the chezmoi-managed `home/` source state.
+- The configuration currently imports `nixos-unstable` through the local Nix channel.
