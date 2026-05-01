@@ -15,7 +15,6 @@
       obs-vkcapture
       obs-backgroundremoval
       pixel-art
-      obs-localvocal
     ];
   };
 }
