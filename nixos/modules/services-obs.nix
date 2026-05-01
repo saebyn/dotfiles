@@ -1,13 +1,13 @@
-{ localPkgs, ... }:
+{ unstable, ... }:
 
 {
   programs.obs-studio = {
     enable = true;
-    package = localPkgs.obs-studio.override {
+    package = unstable.obs-studio.override {
       cudaSupport = true;
     };
     enableVirtualCamera = true;
-    plugins = with localPkgs.obs-studio-plugins; [
+    plugins = with unstable.obs-studio-plugins; [
       wlrobs
       waveform
       obs-pipewire-audio-capture

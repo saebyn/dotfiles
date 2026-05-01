@@ -1,7 +1,6 @@
 { ... }:
 
 let
-  localPkgs = import /home/saebyn/Documents/MyRepos/nixpkgs { };
   unstable = import <nixos-unstable> {
     config = {
       allowUnfree = true;
@@ -25,7 +24,7 @@ in
   ];
 
   _module.args = {
-    inherit localPkgs unstable;
+    inherit unstable;
   };
 
   networking.hostName = "saebyn-studio";
