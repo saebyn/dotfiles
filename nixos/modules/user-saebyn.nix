@@ -14,6 +14,7 @@
     ];
     packages = with pkgs; [
       lmms
+      pandoc
       lazygit
       musescore
       chezmoi
@@ -32,7 +33,7 @@
       gh
       obsidian
       protonmail-desktop
-      blender
+      unstable.blender
       godotPackages_4_6.godot
       discord
       aseprite
