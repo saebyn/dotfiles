@@ -1,3 +1,5 @@
 export ANDROID_HOME="/home/saebyn/Android/Sdk"
 export EDITOR="nvim"
+alias cdr='cd ~/Documents/MyRepos/'
+alias cdd='cd ~/Documents/MyRepos/dotfiles/'
 eval "$(starship init bash)"
