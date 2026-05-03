@@ -29,10 +29,10 @@
       gnumake
       hydrogen
       unstable.opencode
-      vimPlugins.opencode-nvim
       gh
       obsidian
       protonmail-desktop
+      marksman
       unstable.blender
       godotPackages_4_6.godot
       discord
