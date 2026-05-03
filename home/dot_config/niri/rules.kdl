@@ -28,7 +28,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r"^Ardour$"#
+    match app-id=r#"^Ardour$"#
     prefer-no-csd false
 }
 
