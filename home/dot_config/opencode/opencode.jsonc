@@ -2,9 +2,11 @@
   "$schema": "https://opencode.ai/config.json",
 
   "mcp": {
-    "type": "remote",
-    "url": "http://localhost:9876",
-    "enabled": true
+    "blender": {
+      "type": "remote",
+      "url": "http://localhost:9876",
+      "enabled": true
+    }
   },
 
   "provider": {
