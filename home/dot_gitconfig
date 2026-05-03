@@ -8,7 +8,7 @@
 [pull]
 	rebase = true
 [core]
-	editor = code --wait
+	editor = nvim
 [credential "https://github.com"]
 	helper = 
 	helper = !/etc/profiles/per-user/saebyn/bin/gh auth git-credential
