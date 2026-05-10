@@ -78,6 +78,8 @@
       typst
       davinci-resolve-studio
       javaPackages.compiler.temurin-bin.jdk-21
+      rust-analyzer
+      rustup
       (vscode.fhsWithPackages (
         ps: with ps; [
           rust-analyzer

@@ -4,6 +4,9 @@ let
   unstable = import <nixos-unstable> {
     config = {
       allowUnfree = true;
+      permittedInsecurePackages = [
+        "openclaw-2026.4.12"
+      ];
     };
   };
 in
@@ -21,6 +24,7 @@ in
     ../../modules/services-obs.nix
     ../../modules/virtualization.nix
     ../../modules/local-data-manager.nix
+    ../../modules/openclaw-agent.nix
   ];
 
   _module.args = {

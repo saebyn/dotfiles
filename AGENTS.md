@@ -6,8 +6,8 @@ This repository contains portable user dotfiles managed with chezmoi.
 
 - `.chezmoiroot` points chezmoi at `home/`.
 - `home/` contains chezmoi source state.
-- This repo currently manages user-level dotfiles only.
-- NixOS system configuration may be added later, but is intentionally out of scope for now.
+- `nixos/` contains NixOS system configuration, organized under `nixos/hosts/` and `nixos/modules/`.
+- This repo manages both user-level dotfiles (via chezmoi) and NixOS system configuration.
 
 ## Tool usage
 
