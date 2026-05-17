@@ -2,7 +2,7 @@ return {
 	{
 		"habamax/vim-godot",
 		config = function()
-			vim.g.expandtab = true
+			vim.g.gdscript_recommended_style = true
 		end,
 	},
 	{
