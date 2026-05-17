@@ -1,1 +1,1 @@
-vim.opt.expandtab = true
+set expandtab=true
