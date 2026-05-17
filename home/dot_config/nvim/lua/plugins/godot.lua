@@ -1,5 +1,21 @@
 return {
-	{ "habamax/vim-godot" },
+	{
+		"habamax/vim-godot",
+		init = function()
+			vim.g.gdscript_recommended_style = 0
+		end,
+		config = function()
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = "gdscript",
+				callback = function()
+					vim.opt_local.expandtab = true
+					vim.opt_local.tabstop = 2
+					vim.opt_local.shiftwidth = 2
+					vim.opt_local.softtabstop = 2
+				end,
+			})
+		end,
+	},
 	{
 		"neovim/nvim-lspconfig",
 		---@class PluginLspOpts
