@@ -47,12 +47,14 @@
       inkscape-with-extensions
       nodejs_24
       twitch-cli
-      pnpm
+      unstable.pnpm
       ungoogled-chromium
       awscli2
       jq
       biome
-      prisma-engines
+      unstable.prisma-engines_7
+      unstable.prisma_7
+      openssl
       android-studio
       kotlin
       ssm-session-manager-plugin
@@ -94,5 +96,11 @@
         ]
       ))
     ];
+  };
+
+  environment.variables = {
+    PRISMA_QUERY_ENGINE_BINARY = "${unstable.prisma-engines_7}/bin/query-engine";
+    PRISMA_QUERY_ENGINE_LIBRARY = "${unstable.prisma-engines_7}/lib/libquery_engine.so";
+    PRISMA_SCHEMA_ENGINE_BINARY = "${unstable.prisma-engines_7}/bin/schema-engine";
   };
 }

@@ -42,4 +42,5 @@
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
+  services.fwupd.enable = false;
 }
