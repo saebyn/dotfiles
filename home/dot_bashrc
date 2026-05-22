@@ -1,13 +1,6 @@
-export ANDROID_HOME="/home/saebyn/Android/Sdk"
-export EDITOR="nvim"
-alias cdr='cd ~/Documents/MyRepos/'
-alias cdd='cd ~/Documents/MyRepos/dotfiles/'
-eval "$(starship init bash)"
+# Source shell modules
+for f in ~/.config/shell/*.bash; do
+  [[ -f "$f" ]] && source "$f"
+done
 
-# pnpm
-export PNPM_HOME="/home/saebyn/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+eval "$(starship init bash)"
