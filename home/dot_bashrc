@@ -1,6 +1,6 @@
+eval "$(starship init bash)"
+
 # Source shell modules
 for f in ~/.config/shell/*.bash; do
   [[ -f "$f" ]] && source "$f"
 done
-
-eval "$(starship init bash)"
