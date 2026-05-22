@@ -12,6 +12,6 @@ stream-safe	STREAM_MODE=1 is your reminder to avoid leaking secrets on stream. e
 stream-safe	Before streaming: close .env files, clear history with Ctrl+L, check terminal scrollback for secrets.
 kitty	kitty_mod+t: new tab with cwd. kitty_mod+enter: new window with cwd. kitty_mod+n: new OS window with cwd.
 kitty	ctrl+plus / ctrl+minus: increase/decrease font size. ctrl+0: reset font size.
-niri	Mod+T: open terminal. Mod+P: fuzzel launcher. Mod+Shift+T: toggle stream mode.
+niri	Mod+T: open terminal. Mod+P: fuzzel launcher. Mod+Shift+N: toggle stream mode.
 niri	Mod+S: screenshot. Ctrl+Mod+S: screenshot screen. Alt+Mod+S: screenshot window.
 niri	Mod+BracketLeft/Right: consume/expel window into column. Mod+Comma/Period: same for columns.

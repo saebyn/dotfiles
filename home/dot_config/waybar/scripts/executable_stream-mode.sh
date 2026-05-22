@@ -5,7 +5,7 @@
 FLAG_FILE="$HOME/.stream-mode"
 
 if [[ -f "$FLAG_FILE" ]]; then
-  printf '{"text": "🔴 STREAM", "tooltip": "Stream mode active (Mod+Shift+T to toggle)", "class": "stream-active"}\n'
+  printf '{"text": "🔴 STREAM", "tooltip": "Stream mode active (Mod+Shift+N to toggle)", "class": "stream-active"}\n'
 else
   printf '{"text": "", "tooltip": ""}\n'
 fi

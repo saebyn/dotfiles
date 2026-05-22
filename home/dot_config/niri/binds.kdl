@@ -16,7 +16,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal" { spawn "kitty"; }
-    Mod+Shift+T hotkey-overlay-title="Toggle Stream Mode" { spawn "bash" "-c" "~/.config/niri/scripts/toggle-stream-mode.sh"; }
+    Mod+Shift+N hotkey-overlay-title="Toggle Stream Mode" { spawn "bash" "-c" "~/.config/niri/scripts/toggle-stream-mode.sh"; }
     Mod+P hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
