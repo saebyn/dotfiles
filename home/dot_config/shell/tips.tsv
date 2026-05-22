@@ -1,0 +1,18 @@
+zoxide	z <partial>: jump to a frecent directory. zi: interactive fzf picker. Learns from your cd usage over time.
+zoxide	repos: fzf picker for all projects under ~/Documents/MyRepos.
+direnv	direnv allow: activate a .envrc in the current directory. direnv edit: open it safely. Unloads automatically on cd out.
+direnv	Add `use flake` to .envrc to auto-activate a flake.nix dev shell via nix-direnv.
+gh	gh pr create: open a pull request from the current branch. gh pr view --web: open it in the browser.
+gh	gh run list: see recent CI runs. gh run watch: stream a live run. gh issue list: browse open issues.
+lazygit	lazygit: full TUI for git. Press ?: help. Space: stage. c: commit. p: push. Arrow keys navigate.
+lazygit	In lazygit, press e on a file to open it in $EDITOR. d: discard changes. Enter: view diff.
+chezmoi	chezmoi diff: see what would change. chezmoi apply: apply changes. chezmoi edit <file>: edit a managed file.
+chezmoi	chezmoi add <file>: start managing a new dotfile. chezmoi re-add: sync changes made directly to the target.
+stream-safe	STREAM_MODE=1 is your reminder to avoid leaking secrets on stream. env-public shows env vars with secrets filtered.
+stream-safe	Before streaming: close .env files, clear history with Ctrl+L, check terminal scrollback for secrets.
+kitty	kitty_mod+t: new tab with cwd. kitty_mod+enter: new window with cwd. kitty_mod+n: new OS window with cwd.
+kitty	ctrl+plus / ctrl+minus: increase/decrease font size. ctrl+0: reset font size.
+niri	Mod+T: open terminal. Mod+P: fuzzel launcher. Mod+Shift+T: toggle stream mode.
+niri	Mod+S: screenshot. Ctrl+Mod+S: screenshot screen. Alt+Mod+S: screenshot window.
+niri	Mod+BracketLeft/Right: consume/expel window into column. Mod+Comma/Period: same for columns.
+mise	mise tasks: list available tasks in the current project. mise run <task>: run one.
