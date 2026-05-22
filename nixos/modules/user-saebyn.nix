@@ -60,6 +60,17 @@
       ssm-session-manager-plugin
       starship
       fastfetch
+      # CLI quality-of-life tools (issue #7)
+      zoxide
+      atuin
+      direnv
+      nix-direnv
+      bat
+      eza
+      delta
+      duf
+      dust
+      btop
       whisper-cpp
       vlc
       oterm
