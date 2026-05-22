@@ -15,3 +15,12 @@ kitty	ctrl+plus / ctrl+minus: increase/decrease font size. ctrl+0: reset font si
 niri	Mod+T: open terminal. Mod+P: fuzzel launcher. Mod+Shift+N: toggle stream mode.
 niri	Mod+S: screenshot. Ctrl+Mod+S: screenshot screen. Alt+Mod+S: screenshot window.
 niri	Mod+BracketLeft/Right: consume/expel window into column. Mod+Comma/Period: same for columns.
+mise	mise tasks: list available tasks in the current project. mise run <task>: run one.
+ctx:git	This is a Git repo: lazygit for a visual overview, gh repo view --web to open on GitHub.
+ctx:git	git log --oneline -10: quick recent history. delta makes diffs readable if set as your pager.
+ctx:envrc	This repo has .envrc: run `direnv allow` to activate it. `direnv edit` opens it safely.
+ctx:flake	This repo has flake.nix: add `use flake` to .envrc to auto-activate the dev shell via nix-direnv.
+ctx:package	This repo has package.json: check for a `mise.toml` to see if task runners are defined.
+ctx:godot	This looks like a Godot project: the Neovim GDScript LSP is active. Use the debugger via DAP.
+ctx:dotfiles	This is the dotfiles repo: chezmoi diff to see pending changes, chezmoi apply to deploy them.
+ctx:stream	STREAM MODE is active: avoid cat .env, use env-public, and check your terminal scrollback.
