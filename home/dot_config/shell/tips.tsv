@@ -15,4 +15,3 @@ kitty	ctrl+plus / ctrl+minus: increase/decrease font size. ctrl+0: reset font si
 niri	Mod+T: open terminal. Mod+P: fuzzel launcher. Mod+Shift+T: toggle stream mode.
 niri	Mod+S: screenshot. Ctrl+Mod+S: screenshot screen. Alt+Mod+S: screenshot window.
 niri	Mod+BracketLeft/Right: consume/expel window into column. Mod+Comma/Period: same for columns.
-mise	mise tasks: list available tasks in the current project. mise run <task>: run one.
