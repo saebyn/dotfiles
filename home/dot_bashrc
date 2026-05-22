@@ -1,9 +1,4 @@
 eval "$(starship init bash)"
-#
-# atuin — local searchable shell history (no sync)
-if command -v atuin &>/dev/null; then
-  eval "$(atuin init bash --disable-up-arrow)"
-fi
 
 # Source shell modules
 for f in ~/.config/shell/*.bash; do
