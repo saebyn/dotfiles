@@ -10,6 +10,7 @@
         "niri/window"
     ],
     "modules-right": [
+        "custom/stream-mode",
         "mpd",
         "pulseaudio",
         "cpu",
@@ -71,6 +72,13 @@
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
+    },
+    "custom/stream-mode": {
+        "exec": "~/.config/waybar/scripts/stream-mode.sh",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 1,
+        "on-click": "~/.config/niri/scripts/toggle-stream-mode.sh"
     },
     "custom/gpu": {
         "exec": "~/.config/waybar/scripts/gpu.sh",
