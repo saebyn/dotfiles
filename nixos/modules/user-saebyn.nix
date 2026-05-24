@@ -21,6 +21,7 @@
       pre-commit
       gitleaks
       fzf
+      mpvpaper
       ripgrep
       fd
       curl
