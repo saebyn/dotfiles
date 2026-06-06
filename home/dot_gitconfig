@@ -15,3 +15,5 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/etc/profiles/per-user/saebyn/bin/gh auth git-credential
+[push]
+	autoSetupRemote = true
