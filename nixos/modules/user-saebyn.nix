@@ -8,6 +8,7 @@
       "networkmanager"
       "wheel"
       "docker"
+      "input"
       "render"
       "plugdev"
       "audio"
@@ -16,6 +17,7 @@
       lmms
       pandoc
       lazygit
+      git-lfs
       musescore
       chezmoi
       pre-commit
@@ -31,8 +33,6 @@
       hydrogen
       unstable.opencode
       gh
-      obsidian
-      protonmail-desktop
       marksman
       unstable.blender
       godotPackages_4_6.godot
@@ -49,7 +49,6 @@
       nodejs_24
       twitch-cli
       unstable.pnpm
-      ungoogled-chromium
       awscli2
       jq
       biome

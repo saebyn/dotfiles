@@ -49,10 +49,10 @@
   programs.firefox.enable = true;
   programs.gamemode.enable = true;
 
-  systemd.sleep.extraConfig = ''
-    AllowSuspend=no
-    AllowHibernate=no
-    AllowHybridSleep=no
-    AllowSuspendThenHibernate=no
-  '';
+  systemd.sleep.settings.Sleep = {
+    AllowSuspend = "no";
+    AllowHibernate = "no";
+    AllowHybridSleep = "no";
+    AllowSuspendThenHibernate = "no";
+  };
 }

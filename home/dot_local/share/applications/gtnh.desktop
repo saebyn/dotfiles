@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=GT New Horizons 2.7.4
+Comment=Launch GT New Horizons 2.7.4 with Prism Launcher
+Exec=prismlauncher --launch "GT_New_Horizons_2.7.4_Java_17-21"
+Icon=prismlauncher
+Terminal=false
+Categories=Game;

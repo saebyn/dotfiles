@@ -5,7 +5,7 @@ let
     config = {
       allowUnfree = true;
       permittedInsecurePackages = [
-        "openclaw-2026.5.7"
+        "openclaw-2026.6.1"
       ];
     };
   };
@@ -32,6 +32,11 @@ in
   };
 
   networking.hostName = "saebyn-studio";
+
+  swapDevices = [{
+      device = "/var/lib/swapfile";
+      size = 64 * 1024;  # 64 GB
+  }];
 
   system.stateVersion = "25.05";
 }

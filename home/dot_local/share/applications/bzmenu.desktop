@@ -1,0 +1,7 @@
+[Desktop Entry]
+
+Type=Application
+Version=1.0
+Exec=bzmenu --launcher fuzzel
+Name=bzmenu
+Terminal=false
