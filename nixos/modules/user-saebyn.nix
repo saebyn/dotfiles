@@ -19,6 +19,7 @@
       lazygit
       git-lfs
       musescore
+      rmpc
       chezmoi
       pre-commit
       gitleaks

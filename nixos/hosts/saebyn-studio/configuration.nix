@@ -17,6 +17,7 @@ in
     ../../modules/desktop.nix
     ../../modules/nvidia.nix
     ../../modules/audio.nix
+    ../../modules/music.nix
     ../../modules/printing.nix
     ../../modules/packages-system.nix
     ../../modules/user-saebyn.nix
@@ -33,10 +34,12 @@ in
 
   networking.hostName = "saebyn-studio";
 
-  swapDevices = [{
+  swapDevices = [
+    {
       device = "/var/lib/swapfile";
-      size = 64 * 1024;  # 64 GB
-  }];
+      size = 64 * 1024; # 64 GB
+    }
+  ];
 
   system.stateVersion = "25.05";
 }
