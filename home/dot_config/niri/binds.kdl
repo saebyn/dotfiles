@@ -18,6 +18,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal" { spawn "kitty"; }
     Mod+Shift+N hotkey-overlay-title="Toggle Stream Mode" { spawn "bash" "-c" "~/.config/niri/scripts/toggle-stream-mode.sh"; }
     Mod+P hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+D repeat=false hotkey-overlay-title="Toggle Voice Dictation" { spawn "voxtype" "record" "toggle"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
