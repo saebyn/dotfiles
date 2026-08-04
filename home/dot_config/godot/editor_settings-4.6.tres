@@ -1,8 +1,5 @@
 [gd_resource type="EditorSettings" format=3]
 
-[sub_resource type="InputEventKey" id="InputEventKey_5cr5a"]
-keycode = 4194326
-
 [resource]
 interface/editor/display_scale = 4
 interface/theme/base_color = Color(0.161, 0.161, 0.161, 1)
@@ -15,6 +12,7 @@ filesystem/external_programs/3d_model_editor = "/etc/profiles/per-user/saebyn/bi
 filesystem/external_programs/terminal_emulator = "/run/current-system/sw/bin/kitty"
 filesystem/directories/default_project_path = "/home/saebyn/Documents/MyRepos"
 filesystem/import/blender/blender_path = "/etc/profiles/per-user/saebyn/bin/blender"
+filesystem/import/blender/rpc_port = 0
 text_editor/theme/highlighting/symbol_color = Color(0.67, 0.79, 1, 1)
 text_editor/theme/highlighting/keyword_color = Color(1, 0.44, 0.52, 1)
 text_editor/theme/highlighting/control_flow_keyword_color = Color(1, 0.55, 0.8, 1)
@@ -95,10 +93,3 @@ gut/editor_window_on_top = false
 _export_preset_advanced_mode = false
 export/android/scrcpy/screen_size = "1920x1080/120"
 export/macos/actool = ""
-shortcuts = [{
-"name": "spatial_editor/viewport_zoom_modifier_1",
-"shortcuts": [SubResource("InputEventKey_5cr5a")]
-}, {
-"name": "spatial_editor/viewport_zoom_modifier_2",
-"shortcuts": []
-}]
