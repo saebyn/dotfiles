@@ -1,5 +1,10 @@
-engine = "whisper"
 state_file = "auto"
+engine = "whisper"
+
+[audio]
+device = "alsa_input.usb-Blue_Microphones_Yeti_Stereo_Microphone_REV8-00.analog-stereo"
+sample_rate = 16000
+max_duration_secs = 120
 
 [hotkey]
 enabled = false
