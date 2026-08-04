@@ -17,6 +17,7 @@ in
     ../../modules/desktop.nix
     ../../modules/nvidia.nix
     ../../modules/audio.nix
+    ../../modules/voxtype.nix
     ../../modules/music.nix
     ../../modules/printing.nix
     ../../modules/packages-system.nix
