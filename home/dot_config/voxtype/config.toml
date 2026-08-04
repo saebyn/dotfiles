@@ -1,0 +1,21 @@
+engine = "whisper"
+state_file = "auto"
+
+[hotkey]
+enabled = false
+
+[whisper]
+model = "large-v3-turbo"
+language = "en"
+translate = false
+on_demand_loading = false
+
+[output]
+mode = "type"
+fallback_to_clipboard = true
+pre_type_delay_ms = 150
+
+[output.notification]
+on_recording_start = true
+on_recording_stop = true
+on_transcription = true
