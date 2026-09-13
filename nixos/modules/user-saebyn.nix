@@ -71,7 +71,9 @@
       duf
       dust
       btop
-      whisper-cpp
+      (whisper-cpp.override {
+        cudaSupport = true;
+      })
       vlc
       oterm
       swaynotificationcenter
@@ -89,23 +91,10 @@
       libnotify
       nautilus
       typst
-      davinci-resolve-studio
+      unstable.davinci-resolve-studio
       javaPackages.compiler.temurin-bin.jdk-21
       rust-analyzer
       rustup
-      (vscode.fhsWithPackages (
-        ps: with ps; [
-          rust-analyzer
-          rustup
-          kotlin
-          pkgs.javaPackages.compiler.temurin-bin.jdk-21
-          zlib
-          openssl.dev
-          pkg-config
-          gcc
-          gdtoolkit_4
-        ]
-      ))
     ];
   };
 

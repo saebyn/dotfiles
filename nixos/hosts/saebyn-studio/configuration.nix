@@ -25,7 +25,7 @@ in
     ../../modules/services-ai.nix
     ../../modules/services-obs.nix
     ../../modules/virtualization.nix
-    ../../modules/local-data-manager.nix
+    ../../modules/work-drives.nix
     ../../modules/openclaw-agent.nix
   ];
 

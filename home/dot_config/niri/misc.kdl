@@ -7,8 +7,6 @@
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
 
-spawn-at-startup "~/.config/niri/scripts/start-wallpaper.sh"
-
 spawn-at-startup "mako"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.

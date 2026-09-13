@@ -15,6 +15,7 @@
       obs-vkcapture
       obs-backgroundremoval
       pixel-art
+      obs-vertical-canvas
       obs-aitum-multistream
     ];
   };
