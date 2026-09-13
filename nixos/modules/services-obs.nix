@@ -1,4 +1,4 @@
-{ unstable, ... }:
+{ pkgs, unstable, ... }:
 
 {
   programs.obs-studio = {
@@ -18,5 +18,24 @@
       obs-vertical-canvas
       obs-aitum-multistream
     ];
+  };
+
+  systemd.user.services.obs-stream-mode-monitor = {
+    description = "Enable stream mode while OBS is running";
+    wantedBy = [ "graphical-session.target" ];
+    partOf = [ "graphical-session.target" ];
+    after = [ "graphical-session.target" ];
+    path = with pkgs; [
+      bash
+      coreutils
+      procps
+      systemd
+    ];
+
+    serviceConfig = {
+      ExecStart = "%h/.config/niri/scripts/obs-stream-mode-monitor.sh";
+      Restart = "on-failure";
+      RestartSec = "5s";
+    };
   };
 }
