@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 let
   unstable = import <nixos-unstable> {
@@ -8,6 +8,10 @@ let
         "openclaw-2026.6.33"
       ];
     };
+  };
+  redeemfx = builtins.fetchTarball {
+    url = "https://github.com/saebyn/redeemfx/archive/777ece95b012f4f22f050f46867f9e4135a04f5c.tar.gz";
+    sha256 = "1f1x320dlnc1p6gqsvvkd4zbhaa2vrnp3s8ry2i4c7vjwnhh8c0f";
   };
 in
 {
@@ -27,7 +31,9 @@ in
     ../../modules/virtualization.nix
     ../../modules/work-drives.nix
     ../../modules/openclaw-agent.nix
-  ];
+    "${redeemfx}/nix/module.nix"
+  ]
+  ++ lib.optional (builtins.pathExists ./redeemfx-local.nix) ./redeemfx-local.nix;
 
   _module.args = {
     inherit unstable;
