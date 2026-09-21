@@ -14,9 +14,24 @@ window-rule {
 }
 
 window-rule {
-  match app-id="^resolve$"
-  open-floating true
-  open-maximized true
+    // Match the primary Resolve instance
+    match app-id=r#"^resolve$"#
+
+    // Force dialogs, pop-ups, and the splash screen to float
+    match is-active-toplevel=false
+    
+    // Prevent xwayland-satellite jitter on sub-menus
+    open-floating true
+}
+
+window-rule {
+    // Explicitly target the Project Manager and pop-ups by title structure
+    match title=r#"^DaVinci Resolve Studio - Project Manager$"#
+    match title=r#"^Project Manager$"#
+    match title=r#"^DaVinci Resolve$"#
+    
+    open-floating true
+    default-column-width { proportion 0.6; }
 }
 
 window-rule {
