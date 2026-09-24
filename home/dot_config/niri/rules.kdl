@@ -59,6 +59,16 @@ window-rule {
 }
 
 window-rule {
+    match app-id="firefox-stream-music"
+    open-on-workspace "music"
+}
+
+window-rule {
+    match app-id="music-rmpc"
+    open-on-workspace "music"
+}
+
+window-rule {
     match app-id=r#"firefox$"# title="^New dashboard - "
     open-on-workspace "gtnh"
 }

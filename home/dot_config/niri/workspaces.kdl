@@ -18,3 +18,7 @@ workspace "stream-monitor" {
 workspace "gtnh" {
   open-on-output "DP-3"
 }
+
+workspace "music" {
+  open-on-output "DP-3"
+}

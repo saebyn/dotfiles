@@ -9,6 +9,9 @@ spawn-at-startup "waybar"
 
 spawn-at-startup "mako"
 
+spawn-at-startup "env" "MOZ_APP_REMOTINGNAME=firefox-stream-music" "PULSE_SINK=alsa_output.pci-0000_01_00.1.pro-output-8" "firefox" "--new-instance" "-P" "stream-music"
+spawn-at-startup "kitty" "--class" "music-rmpc" "--title" "Music" "rmpc"
+
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
