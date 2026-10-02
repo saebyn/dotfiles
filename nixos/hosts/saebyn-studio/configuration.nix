@@ -28,6 +28,7 @@ in
     ../../modules/user-saebyn.nix
     ../../modules/services-ai.nix
     ../../modules/services-obs.nix
+    ../../modules/gtnh-control.nix
     ../../modules/virtualization.nix
     ../../modules/work-drives.nix
     ../../modules/openclaw-agent.nix
