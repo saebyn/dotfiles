@@ -1,5 +1,25 @@
 { pkgs, unstable, ... }:
 
+let
+  xwayland-satellite_0_8_1 =
+    let
+      version = "0.8.1";
+      src = pkgs.fetchFromGitHub {
+        owner = "Supreeeme";
+        repo = "xwayland-satellite";
+        tag = "v${version}";
+        hash = "sha256-BUE41HjLIGPjq3U8VXPjf8asH8GaMI7FYdgrIHKFMXA=";
+      };
+    in
+    pkgs.xwayland-satellite.overrideAttrs (_: {
+      inherit version src;
+      cargoDeps = pkgs.rustPlatform.fetchCargoVendor {
+        inherit version src;
+        pname = "xwayland-satellite";
+        hash = "sha256-16L6gsvze+m7XCJlOA1lsPNELE3D364ef2FTdkh0rVY=";
+      };
+    });
+in
 {
   users.users.saebyn = {
     isNormalUser = true;
@@ -81,7 +101,8 @@
       fuzzel
       bzmenu
       kitty
-      xwayland-satellite
+      # 0.8.2 hides Resolve's Project Manager: upstream issue #481.
+      xwayland-satellite_0_8_1
       pavucontrol
       pamixer
       bluez
