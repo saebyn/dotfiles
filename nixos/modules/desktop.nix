@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, unstable, ... }:
 
 {
   services.xserver.enable = true;
@@ -20,6 +20,7 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
+    package = unstable.bluez;
   };
 
   security.pam.services.sddm.kwallet.enable = true;
