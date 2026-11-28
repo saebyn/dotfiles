@@ -5,7 +5,7 @@ let
     config = {
       allowUnfree = true;
       permittedInsecurePackages = [
-        "openclaw-2026.6.33"
+        "openclaw-2026.10.5"
       ];
     };
   };
@@ -41,7 +41,7 @@ in
   };
 
   networking.hostName = "saebyn-studio";
-
+  networking.firewall.interfaces.eno2.allowedTCPPorts = [ 3000 4173 ];
   swapDevices = [
     {
       device = "/var/lib/swapfile";

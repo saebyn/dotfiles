@@ -56,7 +56,7 @@ in
       gh
       marksman
       unstable.blender
-      godotPackages_4_6.godot
+      godotPackages_4_7.godot
       discord
       aseprite
       audacity

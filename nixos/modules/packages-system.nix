@@ -3,6 +3,9 @@
 {
   environment.systemPackages = with pkgs; [
     tree-sitter
+    smartmontools
+    usbutils
+    tmux
     lua-language-server
     shfmt
     stylua

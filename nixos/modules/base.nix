@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, pkgs, ... }:
 
 {
   boot.loader.systemd-boot.enable = true;
@@ -36,6 +36,12 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
+  };
+
+  # Stable paths for the chezmoi-managed LazyVim overrides, independent of the login environment.
+  environment.etc = {
+    "nvim/marksman".source = lib.getExe pkgs.marksman;
+    "nvim/markdown-preview".source = "${pkgs.vimPlugins.markdown-preview-nvim}";
   };
 
   nixpkgs.config.allowUnfree = true;
